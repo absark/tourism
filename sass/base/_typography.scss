@@ -1,0 +1,66 @@
+body{
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: 1.7;
+  
+}
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+ }
+ 
+.primary-heading{
+    color: $color-white;                   
+    margin-bottom: 6rem;
+    font-weight: 700;
+ }
+ .head1{
+    display: inline-block;
+    font-size: 6rem;
+    letter-spacing: 3rem;
+    animation: moveLeft 3s ease-out;
+ }
+ 
+ .head2{
+    display: inline-block;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    animation: moveRight 3s ease-out;
+ }
+
+ // secondary heading
+
+ .secondary-heading{
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    display: inline-block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5rem;
+    font-weight: 700;
+    translate: all .2s;
+    background-image: linear-gradient(to right, $color-green-medium, $color-green-light);
+    
+    &:hover{
+      transform: skewX(15deg) skewY(2deg) scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.5) ;
+      
+    }
+ }
+
+ .heading-tertiary{
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 55;
+ }
+ .paragraph{
+    text-align: left;
+    font-size: 1.6rem;
+    &:not(:last-child){
+       margin-bottom: 1.5rem;
+    }
+ }
+ 

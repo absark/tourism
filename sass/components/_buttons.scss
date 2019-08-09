@@ -1,0 +1,89 @@
+.btn:link,
+.btn,
+.btn:visited{
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    font-weight: 700;
+    border-radius: 10rem;
+    position: relative;
+    border: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    box-shadow: 0 .3rem 2rem rgba($color-black, .5);
+    
+    &:hover{
+        transform: translateY(3px);
+        box-shadow: 0 .3rem 2rem rgba($color-black, .8);
+       
+        &::after{
+            transform: scaleX(1.3) scaleY(1.4);
+            opacity: 0;
+        }
+       
+    }
+    &:active{
+        transform: translate(-1px);
+        box-shadow: 0 .6rem 2rem $color-black;
+    }
+
+    &::after{
+        content: "";
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top:0;
+        left: 0;
+        z-index: -2;
+        transition: all .5s;
+        
+    }
+
+    
+}
+.btn-white{
+    color:$color-black;
+    background-color: $color-white;
+    &::after{
+        background-color:$color-white;
+    }
+}
+.btn-green{
+    color:$color-black;
+   background-image: linear-gradient(to right, $color-green-light,$color-green-medium);
+  
+   &::after{
+    background-color: $color-green-light;
+   }
+}
+
+.animated{
+    animation: moveBtn 2s ease-out;
+    animation-fill-mode: backwards;
+}
+// feature btn
+.btn-link{
+    &:link,
+    &:visited{
+        color: $color-secondary-dark;
+        border-bottom: 1px solid $color-secondary-dark;
+        text-decoration:none;
+        display: inline-block;
+        padding: 1rem;
+        font-weight: 400; 
+        font-size: 1.6rem;
+        transition: all .2s;
+        font-weight: bold;
+    }
+    &:hover{
+        color:$color-white;
+        background-color: $color-secondary;
+        transform: translateY(2px);
+        box-shadow: 0  1rem 2rem rgba($color-black , .5);
+    }
+    &:active{
+        transform: translateY(-1px);
+        box-shadow: 0.5rem  1rem 2rem $color-black;
+    }
+}

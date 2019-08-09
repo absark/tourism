@@ -1,0 +1,152 @@
+.card{
+    position: relative;
+    height: 46rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+   
+     .side{
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         transition: all 1s ease;
+         backface-visibility: hidden;
+         border-radius: 5px;
+         overflow: hidden;
+         box-shadow: 0rem 1.5rem 2rem rgba($color-black, .6);
+     }
+    .front{
+       
+        height: 46rem;
+        
+    }
+    .back{
+        display: inline-block;
+        height: 46rem;
+        text-align: center;
+      
+        transform: rotateY(180deg);
+        .back-content{
+            display: inline-block;
+            width: 80%;
+            color: $color-white;
+        }
+       .text-back{
+          padding-top: 40%;
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          
+       }
+       .price{
+           padding-top: 4%;
+           font-size: 3rem;
+           font-weight: 100;
+           padding-bottom: 20%;
+       }
+      
+    }
+    .back1{
+     
+        background-image: linear-gradient(to right bottom,$color-orange-light,
+        $color-orange-medium, $color-orange-dark);
+    }
+    .back2{
+        background-image: linear-gradient(to right bottom,$color-blue-light,
+        $color-blue-medium, $color-blue-dark);
+    }
+    .back3{
+        background-image: linear-gradient(to right bottom,$color-green-light,
+        $color-green-light, $color-green-dark);
+    }
+
+    &:hover .back{
+        transform: rotateY(0deg);
+    
+        
+    }
+    &:hover .front{
+        transform: rotateY(-180deg);
+        
+    }
+    
+    // tour picture
+    .picture{
+        background-size: cover;
+        background-blend-mode: screen;
+        &.p1{
+            background-image:linear-gradient(to right bottom, $color-orange-light,
+            $color-orange-medium,
+             $color-orange-dark),
+             url("../img/forest.jpg");
+             -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+             clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+            height: 23rem;
+        }
+
+        &.p2{
+            background-image:linear-gradient(to right bottom, $color-blue-light,
+             $color-blue-dark),
+             url("../img/mountain.jpg");
+             -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+             clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+            height: 23rem;
+        }
+        &.p3{
+          
+            background-image:linear-gradient(to right bottom, $color-green-light,$color-green-medium,
+            $color-green-dark),
+             url("../img/bitches.jpg");
+             -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+             clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+            height: 23rem;
+        }
+       }
+       
+       .heading-tour{
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        color: $color-white;
+        font-weight: 300;
+        position: absolute;
+        top: 12rem;
+        right: 0;
+        width: 60%;
+        .text-tour{
+            padding: 1rem 1rem;
+            -webkit-box-decoration-break:clone;
+            box-decoration-break:clone; 
+           
+        
+        }
+        .p1{
+            background-image: linear-gradient(to right bottom, rgba($color-orange-light,.6),
+            rgba($color-orange-dark,.8));  
+        }
+        .p3{
+            background-image: linear-gradient(to right bottom, rgba($color-secondary,.6),
+            rgba($color-secondary-dark,.8));  
+        }
+        .p2{
+            background-image: linear-gradient(to right bottom, rgba($color-blue-light,.8),
+             rgba($color-blue-dark,.8));
+        }
+       }
+       .tour-list{
+         text-align: center;
+         list-style-type: none;
+         width: 80%;
+         margin: 0 auto;
+         font-size: 2rem;
+         
+        li{
+         text-align: center;
+         padding: 1rem;
+         &:not(:last-child){
+            border-bottom: 1px solid rgba($color-list-grey,.7);
+         }
+        }
+       }
+
+      
+      
+}
